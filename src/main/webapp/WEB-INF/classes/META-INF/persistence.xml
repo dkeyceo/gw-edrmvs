@@ -1,10 +1,9 @@
-<persistence>
-    <persistence-unit name="javaee8">
-
-        <jta-data-source>jdbc/MyDataSource</jta-data-source>
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.1">
+    <persistence-unit name="apiOraPU">
+        <jta-data-source>java:/apiOraDS</jta-data-source>
         <properties>
-            <property name="javax.persistence.schema-generation.database.action" value="create" />
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
         </properties>
-
     </persistence-unit>
 </persistence>
